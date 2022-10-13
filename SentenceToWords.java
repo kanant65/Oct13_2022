@@ -24,15 +24,16 @@ public class SentenceToWords {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		// User message.
-		System.out.println("Enter a sentence : ");
-		String sentence = sc.nextLine();
 		
-		//Break up the sentence into words and display
+		System.out.println("Enter a sentence : ");
+		String sentence = sc.nextLine();			
 		String[] words = sentence.split(" ");
 		int n=words.length;
+		
 		sort(words,n);
+		
 		PrintString(words,n);
+		
 		sc.close();
 	}
 
