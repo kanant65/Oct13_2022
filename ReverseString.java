@@ -15,26 +15,29 @@ public class ReverseString {
 		
 
 		reverse(str);
-		
+		char charArray[] =reverse(str);
+		for(char c:charArray) {
+		System.out.print(c);
+		}
 		
 		sc.close();
 	}
-	public static void reverse(String str) {
+	public static char[] reverse(String str) {
 	
         char[] temparray = str.toCharArray(); 
         int left, right = 0; 
         right = temparray.length - 1; 
-  
+        char ch[] =new char[str.length()];
         for (left = 0; left < right; left++, right--) { 
             
             char temp = temparray[left]; 
             temparray[left] = temparray[right]; 
-            temparray[right] = temp; 
-        } 
-  
-        for (char c : temparray) 
-            System.out.print(c); 
-        System.out.println(); 
-		}
+            temparray[right] = temp;
+            
+        }
+        
+        return temparray;
 	}
+	
+}
 
